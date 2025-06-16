@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<!-- 当前 POM 版本 -->
+	<!-- http://maven.apache.org/pom.html http://my.oschina.net/u/1187481/blog/204865 -->
+	<modelVersion>4.0.0</modelVersion>
+	
+	
+	
+	<!-- The Basics -->
+	<!-- 企业网址反写.项目名 -->
+	<groupId>com.gitee.visionalsun.vsframe</groupId>
+	<!-- 项目名-模块名 -->
+	<artifactId>vsframe-plugin</artifactId>
+	<!-- 大版本号.分支版本号.小版本号（Snapshot：快照、Alpha：[预览]内测、Pre：[预览]先前测试、Beta：公测、Release：稳定、RC：正式发布前-非常规、GA：正式发布、Final：最终） -->
+	<!-- RTM：生产|压片版、OEM：发行|随机版、RVL：[伪]正式版、EVAL：评估版、RTL：零售版、 WX：正式版、WB：测试版、PRE：家庭版、PRO：专业版 -->
+	<!-- <version>1.0.1</version> -->
+	<packaging>jar</packaging>
+	
+	
+	<parent>
+		<groupId>com.gitee.visionalsun</groupId>
+		<artifactId>vsframe</artifactId>
+		<version>1.0.1</version>
+		<!-- lookup parent from repository -->
+		<!-- <relativePath>../vsframe</relativePath> -->
+	</parent>
+	
+	
+	<properties></properties>
+	
+	
+	<dependencies>
+		<!-- Junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		
+		<!-- Spring 核心包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		
+		<!-- Spring Boot 核心包 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- MyBatis -->
+		<!-- 核心包 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+		
+		<!-- Log 日志 -->
+		<!-- 文件管理包 -->
+		<!-- <dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency> -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+		<!-- <dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency> -->
+		<dependency>
+			<groupId>com.github.isrsal</groupId>
+			<artifactId>spring-mvc-logger</artifactId>
+			<version>0.2</version>
+		</dependency>
+		
+		<!-- Commons -->
+		<!-- <dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+		</dependency> -->
+		<!-- <dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency> -->
+		<!-- <dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+		</dependency> -->
+		<!-- <dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency> -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<!-- <dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency> -->
+		<!-- 文件上传组件 -->
+		<!-- <dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+		</dependency> -->
+		
+		<!-- Json -->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<classifier>jdk15</classifier>
+		</dependency>
+		
+		<!-- Kaptcha -->
+		<dependency>
+			<groupId>com.github.penggle</groupId>
+			<artifactId>kaptcha</artifactId>
+		</dependency>
+		
+		<!-- JSch（服务器通讯客户端：实现 SSH2 直连 SSHD 服务器） -->
+		<!-- http://blog.csdn.net/fanyuna/article/details/41321723 -->
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+		</dependency>
+		
+		
+		<!-- Basics 扩展包 -->
+		<!-- VisionalSun VSFrame（Util 引用层） -->
+		<dependency>
+			<groupId>com.gitee.visionalsun.vsframe</groupId>
+			<artifactId>vsframe-util</artifactId>
+		</dependency>
+		<!-- VisionalSun VSFrame（Generic 通用层） -->
+		<dependency>
+			<groupId>com.gitee.visionalsun.vsframe</groupId>
+			<artifactId>vsframe-generic</artifactId>
+		</dependency>
+		
+		
+		<!-- System 定制包 -->
+	</dependencies>
+	
+	
+	
+	<!-- Build Settings -->
+	<build>
+		<!-- 定制打包名 -->
+		<finalName>frame-plugin</finalName>
+		
+		<!-- 插件 -->
+		<plugins></plugins>
+	</build>
+	<reporting></reporting>
+	
+	
+	
+	<!-- More Project Information -->
+	<name>VisionalSun VSFrame Plugin</name>
+	<description>VSFrame 框架 - Plugin 插件层</description>
+	<url>https://github.com/visionalsun/vsframe/plugin</url>
+	<inceptionYear>1970年01月01日</inceptionYear>
+	<!-- 许可证 -->
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<!-- 项目组织 -->
+	<organization>
+		<name>Visional S. XIA Group Co., Ltd</name>
+		<url>https://visionalsun.com</url>
+	</organization>
+	<!-- 开发者信息 -->
+	<developers>
+		<developer>
+			<id>visionalsun</id>
+			<name>C/Zhang F. XIA | Visional S. XIA</name>
+			<email>visionalsun@outlook.com</email>
+			<organization>Visional S. XIA Group Co., Ltd</organization>
+			<organizationUrl>https://visionalsun.com</organizationUrl>
+			<timezone>+8</timezone>
+			<roles>
+				<role>Architect</role>
+				<role>Team Manager</role>
+				<role>Project Developer</role>
+			</roles>
+			<properties>
+				<dept>No</dept>
+			</properties>
+		</developer>
+	</developers>
+	<contributors></contributors>
+	
+	
+	
+	<!-- Environment Settings -->
+	<mailingLists></mailingLists>
+	
+	
+	<!-- 项目供应链管理 -->
+	<scm>
+		<url>https://gitee.com/visionalsun/vsframe</url>
+		<connection>scm:git:https://gitee.com/visionalsun/vsframe.git</connection>
+		<developerConnection>scm:git:ssh://visionalsun@gmail.com:visionalsun/vsframe.git</developerConnection>
+		<tag>master</tag>
+	</scm>
+	<issueManagement>
+		<url>https://gitee.com//visionalsun/vsframe/issues</url>
+		<system>VisionalSun VSFrame Issue</system>
+	</issueManagement>
+	<ciManagement>
+		<url>https://gitee.com//visionalsun/vsframe/ci</url>
+		<system>VisionalSun VSFrame Ci</system>
+	</ciManagement>
+	<prerequisites></prerequisites>
+</project>

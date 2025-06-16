@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<!-- 当前 POM 版本 -->
+	<!-- http://maven.apache.org/pom.html http://my.oschina.net/u/1187481/blog/204865 -->
+	<modelVersion>4.0.0</modelVersion>
+	
+	
+	
+	<!-- The Basics -->
+	<!-- 企业网址反写.项目名 -->
+	<groupId>com.gitee.visionalsun.vsframe</groupId>
+	<!-- 项目名-模块名 -->
+	<artifactId>vsframe-generic</artifactId>
+	<!-- 大版本号.分支版本号.小版本号（Snapshot：快照、Alpha：[预览]内测、Pre：[预览]先前测试、Beta：公测、Release：稳定、RC：正式发布前-非常规、GA：正式发布、Final：最终） -->
+	<!-- RTM：生产|压片版、OEM：发行|随机版、RVL：[伪]正式版、EVAL：评估版、RTL：零售版、 WX：正式版、WB：测试版、PRE：家庭版、PRO：专业版 -->
+	<!-- <version>1.0.0</version> -->
+	<packaging>jar</packaging>
+	
+	
+	<parent>
+		<groupId>com.gitee.visionalsun</groupId>
+		<artifactId>vsframe</artifactId>
+		<version>1.0.0</version>
+		<!-- lookup parent from repository -->
+		<!-- <relativePath>../vsframe</relativePath> -->
+	</parent>
+	
+	
+	<properties></properties>
+	
+	
+	<dependencies>
+		<!-- Junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		
+		<!-- Spring 核心包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		
+		<!-- MyBatis -->
+		<!-- 核心包 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+		
+		
+		<!-- Basics 扩展包 -->
+		<!-- VisionalSun VSFrame（Util 引用层） -->
+		<dependency>
+			<groupId>com.gitee.visionalsun.vsframe</groupId>
+			<artifactId>vsframe-util</artifactId>
+		</dependency>
+		
+		
+		<!-- System 定制包 -->
+	</dependencies>
+</project>

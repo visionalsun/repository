@@ -1,0 +1,274 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<!-- 当前 POM 版本 -->
+	<!-- http://maven.apache.org/pom.html http://my.oschina.net/u/1187481/blog/204865 -->
+	<modelVersion>4.0.0</modelVersion>
+	
+	
+	
+	<!-- The Basics -->
+	<!-- 企业网址反写.项目名 -->
+	<groupId>com.gitee.visionalsun.vsframe</groupId>
+	<!-- 项目名-模块名 -->
+	<artifactId>vsframe-util</artifactId>
+	<!-- 大版本号.分支版本号.小版本号（Snapshot：快照、Alpha：[预览]内测、Pre：[预览]先前测试、Beta：公测、Release：稳定、RC：正式发布前-非常规、GA：正式发布、Final：最终） -->
+	<!-- RTM：生产|压片版、OEM：发行|随机版、RVL：[伪]正式版、EVAL：评估版、RTL：零售版、 WX：正式版、WB：测试版、PRE：家庭版、PRO：专业版 -->
+	<!-- <version>1.0.0</version> -->
+	<packaging>jar</packaging>
+	
+	
+	<parent>
+		<groupId>com.gitee.visionalsun</groupId>
+		<artifactId>vsframe</artifactId>
+		<version>1.0.0</version>
+		<!-- lookup parent from repository -->
+		<!-- <relativePath>../vsframe</relativePath> -->
+	</parent>
+	
+	
+	<properties></properties>
+	
+	
+	<dependencies>
+		<!-- Junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		
+		<!-- Commons -->
+		<!-- <dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+		</dependency> -->
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-net</groupId>
+			<artifactId>commons-net</artifactId>
+		</dependency>
+		<!-- <dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency> -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+		</dependency>
+		<!-- <dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency> -->
+		<!-- 文件上传组件 -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+		</dependency>
+		
+		<!-- Spring 核心包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		
+		<!-- MyBatis -->
+		<!-- 核心包 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+		
+		<!-- Apache -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		
+		<!-- Json -->
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<classifier>jdk15</classifier>
+		</dependency>
+		
+		<!-- Jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+		</dependency>
+		
+		<!-- FastJson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+		
+		<!-- Kaptcha -->
+		<dependency>
+			<groupId>com.github.penggle</groupId>
+			<artifactId>kaptcha</artifactId>
+		</dependency>
+		
+		<!-- JSch（服务器通讯客户端：实现 SSH2 直连 SSHD 服务器） -->
+		<!-- http://blog.csdn.net/fanyuna/article/details/41321723 -->
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+		</dependency>
+		
+		<!-- Lombok（精简构建器） -->
+		<!-- http://blog.csdn.net/gongzi2311/article/details/54406793 -->
+		<!-- http://www.tuicool.com/articles/ziymA3 -->
+		<!-- http://blog.csdn.net/bao19901210/article/details/17201173/ -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		
+		<!-- Swagger（RESTful API 文档） -->
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-annotations</artifactId>
+		</dependency>
+		
+		<!-- Twitter Snowflake（分布式自增 ID） -->
+		<!-- https://blog.csdn.net/AlbertFly/article/details/82254985
+		https://baijiahao.baidu.com/s?id=1595266588271036556&wfr=spider&for=pc -->
+		<dependency>
+			<groupId>xyz.downgoon</groupId>
+			<artifactId>snowflake</artifactId>
+		</dependency>
+		
+		<!-- Dom4j（Xml 文件） -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jaxen</groupId>
+			<artifactId>jaxen</artifactId>
+		</dependency>
+		
+		<!-- Jxl（Excle 文档） -->
+		<dependency>
+			<groupId>net.sourceforge.jexcelapi</groupId>
+			<artifactId>jxl</artifactId>
+		</dependency>
+		
+		<!-- iTextPDF（PDF 文件） -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itext-asian</artifactId>
+		</dependency>
+		<!-- always needed -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>kernel</artifactId>
+		</dependency>
+		<!-- always needed -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>io</artifactId>
+		</dependency>
+		<!-- always needed -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>layout</artifactId>
+		</dependency>
+		<!-- only needed for forms -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>forms</artifactId>
+		</dependency>
+		<!-- only needed for PDF/A -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>pdfa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>pdftest</artifactId>
+		</dependency>
+		<!-- <dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itext-licensekey</artifactId>
+		</dependency>
+		only needed for digital signatures
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>sign</artifactId>
+		</dependency>
+		only needed for barcodes
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>barcodes</artifactId>
+		</dependency> -->
+		<!-- only needed for Asian fonts -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>font-asian</artifactId>
+		</dependency>
+		<!-- only needed for hyphenation -->
+		<!-- <dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>hyph</artifactId>
+		</dependency> -->
+		
+		<!-- BarCode(One Dimensional Barcode, 1D)/QRCode(Two Dimensional Barcode, 2D)（条形码：一维条形码/二维条形码） -->
+		<!-- http://www.qrcode.com/ -->
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+		</dependency>
+		
+		
+		<!-- Basics 扩展包 -->
+		
+		
+		<!-- System 定制包 -->
+		<!-- JBarcode（1-dimensional bar code：一维条码） -->
+		<dependency>
+			<groupId>org.jbarcode</groupId>
+			<artifactId>JBarcode</artifactId>
+			<version>0.2.8</version>
+			<type>jar</type>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/resources/lib/jbarcode-0.2.8.jar</systemPath>
+		</dependency>
+		
+		<!-- QRCode（2-dimensional bar code：二维条码） -->
+		<!-- http://www.helloweba.com/view-blog-226.html -->
+		<dependency>
+			<groupId>jp.sourceforge</groupId>
+			<artifactId>QRCode</artifactId>
+			<version>0.0.1</version>
+			<type>jar</type>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/resources/lib/QRCode-0.0.1.jar</systemPath>
+		</dependency>
+	</dependencies>
+</project>

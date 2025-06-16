@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<!-- 当前 POM 版本 -->
+	<!-- http://maven.apache.org/pom.html http://my.oschina.net/u/1187481/blog/204865 -->
+	<modelVersion>4.0.0</modelVersion>
+	
+	
+	
+	<!-- The Basics -->
+	<!-- 企业网址反写.项目名 -->
+	<groupId>com.gitee.visionalsun</groupId>
+	<!-- 项目名 -->
+	<artifactId>vsframe</artifactId>
+	<!-- 大版本号.分支版本号.小版本号（Snapshot：快照、Alpha：[预览]内测、Pre：[预览]先前测试、Beta：公测、Release：稳定、RC：正式发布前-非常规、GA：正式发布、Final：最终） -->
+	<!-- RTM：生产|压片版、OEM：发行|随机版、RVL：[伪]正式版、EVAL：评估版、RTL：零售版、 WX：正式版、WB：测试版、PRE：家庭版、PRO：专业版 -->
+	<version>1.0.1</version>
+	<packaging>pom</packaging>
+	
+	
+	<!-- <parent></parent> -->
+	
+	
+	<properties>
+		<!-- Base setting begin -->
+		<project.build.encoding>UTF-8</project.build.encoding>
+		<project.build.locales>zh_CN</project.build.locales>
+		<project.build.jdk>1.8</project.build.jdk>
+		<!-- Base setting end -->
+		
+		<!-- Plugin setting begin -->
+		<plugin.maven-compiler>3.9.0</plugin.maven-compiler>
+		<plugin.maven-resources>3.3.1</plugin.maven-resources>
+		<plugin.maven-surefire>3.5.2</plugin.maven-surefire>
+		<plugin.maven-source>3.3.1</plugin.maven-source>
+		<plugin.maven-javadoc>3.11.2</plugin.maven-javadoc>
+		<plugin.maven-shade>3.6.0</plugin.maven-shade>
+		<plugin.maven-jar>3.4.2</plugin.maven-jar>
+		<plugin.maven-war>3.4.0</plugin.maven-war>
+		<plugin.maven-eclipse>2.9</plugin.maven-eclipse>
+		<!-- Plugin setting end -->
+		
+		<!-- Lib version begin -->
+		<junit.version>4.12</junit.version>
+		<!-- Shared version number properties -->
+		<org.springframework.version>4.3.21.RELEASE</org.springframework.version>
+		<org.springframework.boot.version>2.1.0.RELEASE</org.springframework.boot.version>
+		<mybatis.version>3.4.6</mybatis.version>
+		<mybatis-spring.version>1.3.2</mybatis-spring.version>
+		<!-- <postgresql.version>42.2.4</postgresql.version> -->
+		<mysql-connector-java.version>8.0.13</mysql-connector-java.version>
+		<!-- <mssql-jdbc.version>6.4.0.jre9</mssql-jdbc.version> -->
+		<!-- <ojdbc14.version>10.2.0.4.0</ojdbc14.version> -->
+		<!-- <com.cloudhopper.proxool.version>0.9.1</com.cloudhopper.proxool.version> -->
+		<!-- <c3p0.version>0.9.5.2</c3p0.version> -->
+		<!-- <mchange-commons-java.version>0.2.15</mchange-commons-java.version> -->
+		<!-- <commons-dbcp2.version>2.5.0</commons-dbcp2.version> -->
+		<!-- <commons-pool2.version>2.6.0</commons-pool2.version> -->
+		<!-- <tomcat-jdbc.version>9.0.10</tomcat-jdbc.version> -->
+		<druid.version>1.1.12</druid.version>
+		<!-- <HikariCP.version>3.2.0</HikariCP.version> -->
+		<cglib.version>3.2.9</cglib.version>
+		<aspectj.version>1.9.2</aspectj.version>
+		<log4j.version>1.2.17</log4j.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<logback.version>1.2.3</logback.version>
+		<validation-api.version>2.0.1.Final</validation-api.version>
+		<hibernate-validator.version>6.0.13.Final</hibernate-validator.version>
+		<javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+		<jstl.version>1.2</jstl.version>
+		<jsp-api.version>2.2</jsp-api.version>
+		<httpclient.version>4.5.6</httpclient.version>
+		<commons-beanutils.version>1.9.3</commons-beanutils.version>
+		<commons-configuration.version>1.10</commons-configuration.version>
+		<commons-lang.version>2.6</commons-lang.version>
+		<commons-lang3.version>3.8.1</commons-lang3.version>
+		<commons-collections4.version>4.2</commons-collections4.version>
+		<commons-logging.version>1.2</commons-logging.version>
+		<commons-net.version>3.6</commons-net.version>
+		<commons-io.version>2.18.0</commons-io.version>
+		<commons-fileupload.version>1.3.3</commons-fileupload.version>
+		<commons-codec.version>1.11</commons-codec.version>
+		<json-lib.version>2.4</json-lib.version>
+		<jackson.version>2.9.7</jackson.version>
+		<org.apache.shiro.version>1.4.0</org.apache.shiro.version>
+		<kaptcha.version>2.3.2</kaptcha.version>
+		<ehcache.version>2.10.9.2</ehcache.version>
+		<ehcache-core.version>2.6.11</ehcache-core.version>
+		<ehcache-web.version>2.0.4</ehcache-web.version>
+		<spring-data-redis.version>1.8.13.RELEASE</spring-data-redis.version>
+		<jedis.version>2.9.0</jedis.version>
+		<redisson.version>3.7.4</redisson.version>
+		<jsch.version>0.1.54</jsch.version>
+		<spring-websocket.version>4.3.18.RELEASE</spring-websocket.version>
+		<javax.websocket.version>1.1</javax.websocket.version>
+		<lombok.version>1.18.4</lombok.version>
+		<swagger-annotations.version>1.5.21</swagger-annotations.version>
+		<dom4j.version>1.6.1</dom4j.version>
+		<jaxen.version>1.1.6</jaxen.version>
+		<jxl.version>2.6.12</jxl.version>
+		<com.itextpdf.version>7.1.2</com.itextpdf.version>
+		<jfreechart.version>1.5.0</jfreechart.version>
+		<com.google.zxing.version>3.3.3</com.google.zxing.version>
+		<!-- Lib version end -->
+	</properties>
+	
+	
+	<dependencyManagement>
+		<dependencies>
+			<!-- Junit -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<type>jar</type>
+				<!-- scope 属性决定该项目的依赖阶段（compile：默认值，表示该项目只在编译、测试、运行阶段中依赖，需要当前 artifact 对应的 jar 包在 classpath 中；
+				provided：表示该项目只在编译、测试、运行阶段中依赖，且 provided 为目标容器和假定已提供此类 jar 包，并已 provided 到当前 artifact；
+				test：表示该项目只在测试代码中依赖；
+				system：表示该项目而是在系统目录中依赖，而非 repository 中，且 systemPath 属性指定了 jar 包所在的绝对路径；） -->
+				<scope>compile</scope>
+			</dependency>
+			
+			<!-- Spring 核心包 -->
+			<!-- 
+				Core utilities used by other modules.
+				Define this if you use Spring Utility APIs (org.springframework.core.*/org.springframework.util.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Expression Language (depends on spring-core)
+				Define this if you use Spring Expression APIs (org.springframework.expression.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-expression</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Bean Factory and JavaBeans utilities (depends on spring-core)
+				Define this if you use Spring Bean APIs (org.springframework.beans.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Aspect Oriented Programming (AOP) Framework (depends on spring-core, spring-beans)
+				Define this if you use Spring AOP APIs (org.springframework.aop.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Application Context (depends on spring-core, spring-expression, spring-aop, spring-beans)
+				This is the central artifact for Spring's Dependency Injection Container and is generally always defined
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Various Application Context utilities, including EhCache, JavaMail, Quartz, and Freemarker integration
+				Define this if you need any of these integrations
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Transaction Management Abstraction (depends on spring-core, spring-beans, spring-aop, spring-context)
+				Define this if you use Spring Transactions or DAO Exception Hierarchy
+				(org.springframework.transaction.*/org.springframework.dao.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				JDBC Data Access Library (depends on spring-core, spring-beans, spring-context, spring-tx)
+				Define this if you use Spring's JdbcTemplate API (org.springframework.jdbc.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Object-to-Relation-Mapping (ORM) integration with Hibernate, JPA, and iBatis.
+				(depends on spring-core, spring-beans, spring-context, spring-tx)
+				Define this if you need ORM (org.springframework.orm.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Object-to-XML Mapping (OXM) abstraction and integration with JAXB, JiBX, Castor, XStream, and XML Beans.
+				(depends on spring-core, spring-beans, spring-context)
+				Define this if you need OXM (org.springframework.oxm.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-oxm</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Web application development utilities applicable to both Servlet and Portlet Environments
+				(depends on spring-core, spring-beans, spring-context)
+				Define this if you use Spring MVC, or wish to use Struts, JSF, or another web framework with Spring (org.springframework.web.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Spring MVC for Servlet Environments (depends on spring-core, spring-beans, spring-context, spring-web)
+				Define this if you use Spring MVC with a Servlet Container such as Apache Tomcat (org.springframework.web.servlet.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Spring MVC for Portlet Environments (depends on spring-core, spring-beans, spring-context, spring-web)
+				Define this if you use Spring MVC with a Portlet Container (org.springframework.web.portlet.*)
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc-portlet</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			<!-- 
+				Support for testing Spring applications with tools such as JUnit and TestNG
+				This artifact is generally always defined with a 'test' scope for the integration testing framework and unit testing stubs
+			 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${org.springframework.version}</version>
+			</dependency>
+			
+			<!-- Spring Boot 核心包 -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${org.springframework.boot.version}</version>
+			</dependency>
+			
+			<!-- MyBatis -->
+			<!-- 核心包 -->
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			
+			<!-- Spring/MyBatis 框架整合包 -->
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis-spring.version}</version>
+			</dependency>
+			
+			<!-- DataBase 驱动（开源：PostgreSQL、MySQL；非开源：MSSQL、Oracle。） -->
+			<!-- PostgreSQL -->
+			<!-- <dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>${postgresql.version}</version>
+			</dependency> -->
+			<!-- MySQL -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql-connector-java.version}</version>
+			</dependency>
+			<!-- MSSQL -->
+			<!-- <dependency>
+				<groupId>com.microsoft.sqlserver</groupId>
+				<artifactId>mssql-jdbc</artifactId>
+				<version>${mssql-jdbc.version}</version>
+			</dependency> -->
+			<!-- Oracle -->
+			<!-- <dependency>
+				<groupId>com.oracle</groupId>
+				<artifactId>ojdbc14</artifactId>
+				<version>${ojdbc14.version}</version>
+			</dependency> -->
+			
+			<!-- DataSource 连接池（Hibernate 推荐：C3P0、Proxool；Spring 推荐：DBCP、JDBC、Druid、HikariCP。） -->
+			<!-- Proxool -->
+			<!-- <dependency>
+				<groupId>com.cloudhopper.proxool</groupId>
+				<artifactId>proxool</artifactId>
+				<version>${com.cloudhopper.proxool.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.cloudhopper.proxool</groupId>
+				<artifactId>proxool-cglib</artifactId>
+				<version>${com.cloudhopper.proxool.version}</version>
+			</dependency> -->
+			<!-- C3P0 -->
+			<!-- <dependency>
+				<groupId>com.mchange</groupId>
+				<artifactId>c3p0</artifactId>
+				<version>${c3p0.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.mchange</groupId>
+				<artifactId>mchange-commons-java</artifactId>
+				<version>${mchange-commons-java.version}</version>
+			</dependency> -->
+			<!-- DBCP -->
+			<!-- <dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-dbcp2</artifactId>
+				<version>${commons-dbcp2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-pool2</artifactId>
+				<version>${commons-pool2.version}</version>
+			</dependency> -->
+			<!-- JDBC -->
+			<!-- <dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-jdbc</artifactId>
+				<version>${tomcat-jdbc.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.tomcat</groupId>
+				<artifactId>tomcat-juli</artifactId>
+				<version>${tomcat-jdbc.version}</version>
+			</dependency> -->
+			<!-- Druid -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+				<!-- <exclusions>
+					<exclusion>
+						<groupId>com.alibaba</groupId>
+						<artifactId>jconsole</artifactId>
+						<version>1.8.0</version>
+					</exclusion>
+					<exclusion>
+						<groupId>com.alibaba</groupId>
+						<artifactId>tools</artifactId>
+						<version>1.8.0</version>
+					</exclusion>
+				</exclusions> -->
+			</dependency>
+			<!-- HikariCP -->
+			<!-- <dependency>
+				<groupId>com.zaxxer</groupId>
+				<artifactId>HikariCP</artifactId>
+				<version>${HikariCP.version}</version>
+			</dependency> -->
+			
+			<!-- Cglib（利用动态代理实现数据库连接与事务的自动管理） -->
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib-nodep</artifactId>
+				<version>${cglib.version}</version>
+			</dependency>
+			
+			<!-- Aspectj -->
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjrt</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>${aspectj.version}</version>
+			</dependency>
+			
+			<!-- Log 日志 -->
+			<!-- 文件管理包 -->
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-core</artifactId>
+				<version>${logback.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>ch.qos.logback</groupId>
+				<artifactId>logback-classic</artifactId>
+				<version>${logback.version}</version>
+				<scope>test</scope>
+			</dependency>
+			
+			<!-- Validate 校验 -->
+			<!-- 基础属性校验包 -->
+			<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>${validation-api.version}</version>
+			</dependency>
+			<!-- 扩展框架校验包 -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>${hibernate-validator.version}</version>
+			</dependency>
+			
+			<!-- Servlet -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${javax.servlet-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>${jstl.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet.jsp</groupId>
+				<artifactId>jsp-api</artifactId>
+				<version>${jsp-api.version}</version>
+			</dependency>
+			
+			<!-- Apache -->
+			<dependency>
+				<groupId>org.apache.httpcomponents</groupId>
+				<artifactId>httpclient</artifactId>
+				<version>${httpclient.version}</version>
+			</dependency>
+			
+			<!-- Commons -->
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>${commons-beanutils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-configuration</groupId>
+				<artifactId>commons-configuration</artifactId>
+				<version>${commons-configuration.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>${commons-collections4.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>${commons-logging.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-net</groupId>
+				<artifactId>commons-net</artifactId>
+				<version>${commons-net.version}</version>
+			</dependency>
+			<!-- 文件上传组件 -->
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons-io.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>${commons-fileupload.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>${commons-codec.version}</version>
+			</dependency>
+			
+			<!-- Json -->
+			<dependency>
+				<groupId>net.sf.json-lib</groupId>
+				<artifactId>json-lib</artifactId>
+				<version>${json-lib.version}</version>
+				<classifier>jdk15</classifier>
+			</dependency>
+			
+			<!-- Jackson -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			
+			<!-- Shiro -->
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-core</artifactId>
+				<version>${org.apache.shiro.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-spring</artifactId>
+				<version>${org.apache.shiro.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-ehcache</artifactId>
+				<version>${org.apache.shiro.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-web</artifactId>
+				<version>${org.apache.shiro.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-quartz</artifactId>
+				<version>${org.apache.shiro.version}</version>
+			</dependency>
+			
+			<!-- Kaptcha -->
+			<dependency>
+				<groupId>com.github.penggle</groupId>
+				<artifactId>kaptcha</artifactId>
+				<version>${kaptcha.version}</version>
+			</dependency>
+			
+			<!-- Ehcache -->
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache</artifactId>
+				<version>${ehcache.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-core</artifactId>
+				<version>${ehcache-core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-web</artifactId>
+				<version>${ehcache-web.version}</version>
+			</dependency>
+			
+			<!-- Redis：Spring -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-redis</artifactId>
+				<version>${spring-data-redis.version}</version>
+			</dependency>
+			<!-- Redis：Jedis -->
+			<dependency>
+				<groupId>redis.clients</groupId>
+				<artifactId>jedis</artifactId>
+				<version>${jedis.version}</version>
+			</dependency>
+			<!-- Redis：Redisson -->
+			<dependency>
+				<groupId>org.redisson</groupId>
+				<artifactId>redisson</artifactId>
+				<version>${redisson.version}</version>
+			</dependency>
+			
+			<!-- JSch（服务器通讯客户端：实现 SSH2 直连 SSHD 服务器） -->
+			<!-- http://blog.csdn.net/fanyuna/article/details/41321723 -->
+			<dependency>
+				<groupId>com.jcraft</groupId>
+				<artifactId>jsch</artifactId>
+				<version>${jsch.version}</version>
+			</dependency>
+			
+			<!-- WebSocket（消息通信：基于 TCP 网络协议） -->
+			<!-- https://www.cnblogs.com/best/archive/2016/09/12/5695570.html
+			https://www.cnblogs.com/xdp-gacl/p/5193279.html -->
+			<!-- WebSocket：Spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-websocket</artifactId>
+				<version>${spring-websocket.version}</version>
+			</dependency>
+			<!-- Tomcat 8：Spring -->
+			<dependency>
+				<groupId>javax.websocket</groupId>
+				<artifactId>javax.websocket-api</artifactId>
+				<version>${javax.websocket.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.websocket</groupId>
+				<artifactId>javax.websocket-client-api</artifactId>
+				<version>${javax.websocket.version}</version>
+			</dependency>
+			
+			<!-- Lombok（Bean get/set 方法注解） -->
+			<!-- http://blog.csdn.net/gongzi2311/article/details/54406793 -->
+			<!-- http://www.tuicool.com/articles/ziymA3 -->
+			<!-- http://blog.csdn.net/bao19901210/article/details/17201173/ -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+			
+			<!-- Swagger（REST API 文档） -->
+			<dependency>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${swagger-annotations.version}</version>
+			</dependency>
+		
+			
+			<!-- Dom4j（Xml 文件） -->
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>${dom4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jaxen</groupId>
+				<artifactId>jaxen</artifactId>
+				<version>${jaxen.version}</version>
+			</dependency>
+			
+			<!-- Jxl（Excle 文档） -->
+			<dependency>
+				<groupId>net.sourceforge.jexcelapi</groupId>
+				<artifactId>jxl</artifactId>
+				<version>${jxl.version}</version>
+			</dependency>
+			
+			<!-- iTextPDF（PDF 文件） -->
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>itextpdf</artifactId>
+				<version>5.5.13</version>
+			</dependency>
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>itext-asian</artifactId>
+				<version>5.2.0</version>
+			</dependency>
+			<!-- always needed -->
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>kernel</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency>
+			<!-- always needed -->
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>io</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency>
+			<!-- always needed -->
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>layout</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency>
+			<!-- only needed for forms -->
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>forms</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency>
+			<!-- only needed for PDF/A -->
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>pdfa</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>pdftest</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency>
+			<!-- <dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>itext-licensekey</artifactId>
+				<version>3.0.2</version>
+			</dependency>
+			only needed for digital signatures
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>sign</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency>
+			only needed for barcodes
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>barcodes</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency> -->
+			<!-- only needed for Asian fonts -->
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>font-asian</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency>
+			<!-- only needed for hyphenation -->
+			<!-- <dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>hyph</artifactId>
+				<version>${com.itextpdf.version}</version>
+			</dependency> -->
+			
+			<!-- JFreeChart（Chart 图表） -->
+			<dependency>
+				<groupId>org.jfree</groupId>
+				<artifactId>jfreechart</artifactId>
+				<version>${jfreechart.version}</version>
+			</dependency>
+			
+			<!-- BarCode(One Dimensional Barcode, 1D)/QRCode(Two Dimensional Barcode, 2D)（条形码：一维条形码/二维条形码） -->
+			<!-- http://www.qrcode.com/ -->
+			<dependency>
+				<groupId>com.google.zxing</groupId>
+				<artifactId>core</artifactId>
+				<version>${com.google.zxing.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.zxing</groupId>
+				<artifactId>javase</artifactId>
+				<version>${com.google.zxing.version}</version>
+			</dependency>
+			
+			
+			<!-- Basics 扩展包 -->
+			<!-- VisionalSun VSFrame（Util 引用层） -->
+			<dependency>
+				<groupId>com.gitee.visionalsun.vsframe</groupId>
+				<artifactId>vsframe-util</artifactId>
+				<version>1.0.1</version>
+			</dependency>
+			<!-- VisionalSun VSFrame（Generic 通用层） -->
+			<dependency>
+				<groupId>com.gitee.visionalsun.vsframe</groupId>
+				<artifactId>vsframe-generic</artifactId>
+				<version>1.0.1</version>
+			</dependency>
+			<!-- VisionalSun VSFrame（Plugin 插件层） -->
+			<dependency>
+				<groupId>com.gitee.visionalsun.vsframe</groupId>
+				<artifactId>vsframe-plugin</artifactId>
+				<version>1.0.1</version>
+			</dependency>
+			
+			
+			<!-- System 定制包 -->
+		</dependencies>
+	</dependencyManagement>
+	
+	
+	<modules>
+		<module>vsframe-util</module>
+		<module>vsframe-generic</module>
+		<module>vsframe-plugin</module>
+	</modules>
+	
+	
+	
+	
+	<!-- Build Settings -->
+	<build>
+		<!-- 定制打包名 -->
+		<finalName>vsframe</finalName>
+		
+		<!-- 插件 -->
+<!--		<pluginManagement>-->
+			<plugins>
+				<!-- Maven 插件 -->
+				<!-- http://maven.apache.org -->
+				<!-- src/main/java 编译文件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${plugin.maven-compiler}</version>
+					<configuration>
+						<fork>true</fork>
+						<verbose>true</verbose>
+						<showWarnings>false</showWarnings>
+						<source>${project.build.jdk}</source>
+						<target>${project.build.jdk}</target>
+						<encoding>${project.build.encoding}</encoding>
+						<compilerArgs>
+							<compilerArg>-verbose</compilerArg>
+							<compilerArg>-Xlint:unchecked</compilerArg>
+							<compilerArg>-Xlint:deprecation</compilerArg>
+							<compilerArg>-bootclasspath</compilerArg>
+							<compilerArg>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar</compilerArg>
+							<compilerArg>-extdirs</compilerArg>
+							<compilerArg>${project.basedir}/src/main/webapp/WEB-INF/lib</compilerArg>
+						</compilerArgs>
+					</configuration>
+				</plugin>
+				<!-- src/main/resources 资源文件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${plugin.maven-resources}</version>
+					<configuration>
+						<encoding>${project.build.encoding}</encoding>
+					</configuration>
+					<executions>
+						<execution>
+							<id>copy-resources</id>
+							<phase>validate</phase>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${project.basedir}/target/classes/META-INF</outputDirectory>
+								<resources>
+									<resource>
+										<directory>src/main/resources/META-INF</directory>
+										<filtering>true</filtering>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<!-- src/test 单元测试 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${plugin.maven-surefire}</version>
+				</plugin>
+				<!-- src 源码文件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>${plugin.maven-source}</version>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<phase>package</phase>
+							<goals>
+								<goal>jar-no-fork</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<!-- src 源码文档 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>${plugin.maven-javadoc}</version>
+					<configuration>
+						<show>public</show>
+						<nohelp>true</nohelp>
+						<doclint>none</doclint>
+						<failOnError>false</failOnError>
+						<aggregate>true</aggregate>
+						<source>${project.build.jdk}</source>
+						<jdkVersion>8</jdkVersion>
+						<destDir>doc</destDir>
+						<charset>${project.build.encoding}</charset>
+						<encoding>${project.build.encoding}</encoding>
+						<docencoding>${project.build.encoding}</docencoding>
+						<outputDirectory>${project.build.directory}/apidocs</outputDirectory>
+						<destinationDirectory>${project.build.directory}/apidocs</destinationDirectory>
+					</configuration>
+					<executions>
+						<execution>
+							<id>attach-javadocs</id>
+							<phase>package</phase>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+							<configuration>
+								<additionalparam>-Xdoclint:none</additionalparam>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<!-- src/webapp/WEB-INF/lib 程序依赖 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-shade-plugin</artifactId>
+					<version>${plugin.maven-shade}</version>
+				</plugin>
+				<!-- src 程序打包 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${plugin.maven-jar}</version>
+					<configuration>
+						<archive>
+							<manifest>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+								<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+							</manifest>
+						</archive>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${plugin.maven-war}</version>
+					<configuration>
+						<warName>${project.artifactId}</warName>
+					</configuration>
+				</plugin>
+				<!-- Eclipse插件，设定下载 Source 并屏蔽 SVN 文件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>${plugin.maven-eclipse}</version>
+					<configuration>
+						<sourceExcludes>
+							<sourceExclude>**/.svn/</sourceExclude>
+						</sourceExcludes>
+						<downloadSources>true</downloadSources>
+						<downloadJavadocs>false</downloadJavadocs>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-gpg-plugin</artifactId>
+					<version>3.2.7</version>
+					<executions>
+						<execution>
+							<id>sign-artifacts</id>
+							<phase>verify</phase>
+							<goals>
+								<goal>sign</goal>
+							</goals>
+							<configuration>
+								<passphraseServerId>central</passphraseServerId>
+								<gpgArguments>
+									<arg>--pinentry-mode</arg>
+									<arg>loopback</arg>
+								</gpgArguments>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.sonatype.central</groupId>
+					<artifactId>central-publishing-maven-plugin</artifactId>
+					<version>0.7.0</version>
+					<extensions>true</extensions>
+					<configuration>
+						<publishingServerId>central</publishingServerId>
+						<tokenAuth>true</tokenAuth>
+						<!-- 若要自动发布，添加以下配置 -->
+						<!--<autoPublish>true</autoPublish>-->
+						<!-- 一直等到发布完成 -->
+						<!--<waitUntil>published</waitUntil>-->
+					</configuration>
+				</plugin>
+			</plugins>
+<!--		</pluginManagement>-->
+	</build>
+	<reporting></reporting>
+	
+	
+	
+	<!-- More Project Information -->
+	<name>VisionalSun VSFrame</name>
+	<description>VSFrame 框架</description>
+	<url>https://github.com/visionalsun/vsframe</url>
+	<inceptionYear>1970年01月01日</inceptionYear>
+	<!-- 许可证 -->
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<!-- 项目组织 -->
+	<organization>
+		<name>Visional S. XIA Group Co., Ltd</name>
+		<url>https://visionalsun.com</url>
+	</organization>
+	<!-- 开发者信息 -->
+	<developers>
+		<developer>
+			<id>visionalsun</id>
+			<name>C/Zhang F. XIA | Visional S. XIA</name>
+			<email>visionalsun@outlook.com</email>
+			<organization>Visional S. XIA Group Co., Ltd</organization>
+			<organizationUrl>https://visionalsun.com</organizationUrl>
+			<timezone>+8</timezone>
+			<roles>
+				<role>Architect</role>
+				<role>Team Manager</role>
+				<role>Project Developer</role>
+			</roles>
+			<properties>
+				<dept>No</dept>
+			</properties>
+		</developer>
+	</developers>
+	<contributors></contributors>
+	
+	
+	
+	<!-- Environment Settings -->
+	<mailingLists></mailingLists>
+	
+	
+	<!-- 项目供应链管理 -->
+	<scm>
+		<url>https://gitee.com/visionalsun/vsframe</url>
+		<connection>scm:git:https://gitee.com/visionalsun/vsframe.git</connection>
+		<developerConnection>scm:git:ssh://visionalsun@gmail.com:visionalsun/vsframe.git</developerConnection>
+		<tag>master</tag>
+	</scm>
+	<issueManagement>
+		<url>https://gitee.com//visionalsun/vsframe/issues</url>
+		<system>VisionalSun VSFrame Issue</system>
+	</issueManagement>
+	<ciManagement>
+		<url>https://gitee.com//visionalsun/vsframe/ci</url>
+		<system>VisionalSun VSFrame Ci</system>
+	</ciManagement>
+	<prerequisites></prerequisites>
+	
+	
+	<!-- 资源库 -->
+	<repositories>
+		<!-- iTextPDF（PDF 文件） -->
+		<!-- <repository>
+			<id>iTextPDF-releases</id>
+			<name>iTextPDF Releases</name>
+			<url>https://repo.itextsupport.com/releases</url>
+		</repository> -->
+		<!-- AliRepo（阿里云） -->
+		<!--  https://maven.aliyun.com -->
+		<repository>
+			<id>aliyun</id>
+			<name>Maven Aliyun</name>
+			<url>https://maven.aliyun.com/repository/central</url>
+		</repository>
+		<!-- Visional Sun（视觉幻影-梦之夏：虚幻的太阳，有着梦幻般的感觉……） -->
+		<!-- https://mvn.visionalsun.com -->
+		<!-- https://mvnrepository.visionalsun.com -->
+		<repository>
+			<id>private</id>
+			<name>Maven Private</name>
+			<url>http://maven.visionalsun.com/repository/maven-private</url>
+			<layout>default</layout>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	
+	
+	<!-- 插件库 -->
+	<pluginRepositories>
+		<!-- Visional Sun（视觉幻影-梦之夏：虚幻的太阳，有着梦幻般的感觉……） -->
+		<!-- https://plgnrepository.visionalsun.com -->
+		<!-- <pluginRepository>
+			<id>plugins</id>
+			<name>Maven Plugins</name>
+			<url>http://maven.visionalsun.com/repository/maven-plugins</url>
+		</pluginRepository> -->
+	</pluginRepositories>
+	
+	
+	<!-- 发布库 -->
+	<distributionManagement>
+		<!-- 发布到 《MVN Repository 中央资源库》：https://mvnrepository.com -->
+		<!-- 
+			https://issues.sonatype.org/service/local/staging/deploy/maven2
+			https://oss.sonatype.org/service/local/staging/deploy/maven2 
+			https://s01.oss.sonatype.org/service/local/staging/deploy/maven2 
+			https://central.sonatype.com/service/local/staging/deploy/maven2
+		-->
+		<!-- <repository>
+			<id>central</id>
+			<name>Maven Releases</name>
+			<url>https://central.sonatype.com/service/local/staging/deploy/maven2</url>
+			<layout>default</layout>
+			<uniqueVersion>false</uniqueVersion>
+		</repository>
+		<snapshotRepository>
+			<id>central</id>
+			<name>Maven Snapshots</name>
+			<url>https://central.sonatype.com/content/repositories/snapshots</url>
+			<layout>default</layout>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository> -->
+		
+		<!-- Visional Sun（视觉幻影-梦之夏：虚幻的太阳，有着梦幻般的感觉……） -->
+		<!-- https://mvn.visionalsun.com -->
+		<!-- <repository>
+			<id>private</id>
+			<name>Maven Releases</name>
+			<url>http://maven.visionalsun.com/content/repositories/releases</url>
+			<layout>default</layout>
+			<uniqueVersion>false</uniqueVersion>
+		</repository>
+		<snapshotRepository>
+			<id>private</id>
+			<name>Maven Snapshots</name>
+			<url>http://maven.visionalsun.com/content/repositories/snapshots</url>
+			<layout>default</layout>
+			<uniqueVersion>true</uniqueVersion>
+		</snapshotRepository> -->
+	</distributionManagement>
+	<profiles></profiles>
+</project>

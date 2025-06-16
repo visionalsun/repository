@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed May 21 18:56:51 CST 2025
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1747825000025
+http\://0.0.0.0/.error=Could not transfer artifact com.gitee.visionalsun.vsframe\:vsframe-util\:jar\:1.0.0 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [public (http\://maven.visionalsun.com/repository/maven-public, default, releases+snapshots)]
+https\://repo1.maven.org/maven2/.lastUpdated=1747825011932

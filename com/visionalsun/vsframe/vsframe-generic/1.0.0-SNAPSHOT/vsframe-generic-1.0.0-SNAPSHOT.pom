@@ -1,0 +1,147 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<!-- 当前 POM 版本 -->
+	<!-- http://maven.apache.org/pom.html http://my.oschina.net/u/1187481/blog/204865 -->
+	<modelVersion>4.0.0</modelVersion>
+	
+	
+	
+	<!-- The Basics -->
+	<!-- 企业网址反写.项目名 -->
+	<groupId>com.visionalsun.vsframe</groupId>
+	<!-- 项目名-模块名 -->
+	<artifactId>vsframe-generic</artifactId>
+	<!-- 大版本号.分支版本号.小版本号（Snapshot：快照、Alpha：[预览]内测、Pre：[预览]先前测试、Beta：公测、Release：稳定、RC：正式发布前-非常规、GA：正式发布、Final：最终） -->
+	<!-- RTM：生产|压片版、OEM：发行|随机版、RVL：[伪]正式版、EVAL：评估版、RTL：零售版、 WX：正式版、WB：测试版、PRE：家庭版、PRO：专业版 -->
+	<!-- <version>1.0.0-SNAPSHOT</version> -->
+	<packaging>jar</packaging>
+	
+	
+	<parent>
+		<groupId>com.visionalsun</groupId>
+		<artifactId>vsframe</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<!-- lookup parent from repository -->
+		<!-- <relativePath>../vsframe</relativePath> -->
+	</parent>
+	
+	
+	<properties></properties>
+	
+	
+	<dependencies>
+		<!-- Junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		
+		<!-- Spring 核心包 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		
+		<!-- MyBatis -->
+		<!-- 核心包 -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+		
+		
+		<!-- Basics 扩展包 -->
+		<!-- VisionalSun VSFrame（Util 引用层） -->
+		<dependency>
+			<groupId>com.visionalsun.vsframe</groupId>
+			<artifactId>vsframe-util</artifactId>
+		</dependency>
+		
+		
+		<!-- System 定制包 -->
+	</dependencies>
+	
+	
+	
+	<!-- Build Settings -->
+	<build>
+		<!-- 定制打包名 -->
+		<finalName>frame-generic</finalName>
+		
+		<!-- 插件 -->
+		<plugins></plugins>
+	</build>
+	<reporting></reporting>
+	
+	
+	
+	<!-- More Project Information -->
+	<name>VSFrame Generic</name>
+	<!-- 项目描述 -->
+	<description>VisionalSun VSFrame - Generic 通用层</description>
+	<url>https://github.com/visionalsun/vsframe/generic</url>
+	<inceptionYear>1970年01月01日</inceptionYear>
+	<!-- 许可证 -->
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<!-- 项目组织 -->
+	<organization>
+		<name>Visional Sun</name>
+		<url>https://visionalsun.com</url>
+	</organization>
+	<!-- 开发者信息 -->
+	<developers>
+		<developer>
+			<id>visionalsun</id>
+			<name>Visional Sun</name>
+			<email>visionalsun@outlook.com</email>
+			<organization>Visional Sun</organization>
+			<organizationUrl>https://visionalsun.com</organizationUrl>
+			<roles>
+				<role>Architect</role>
+				<role>Project Manager</role>
+			</roles>
+			<properties>
+				<dept>No</dept>
+			</properties>
+			<timezone>-5</timezone>
+		</developer>
+	</developers>
+	<contributors></contributors>
+	
+	
+	
+	<!-- Environment Settings -->
+	<issueManagement></issueManagement>
+	<ciManagement></ciManagement>
+	<mailingLists></mailingLists>
+	
+	
+	<!-- 项目供应链管理 -->
+	<scm>
+		<url>https://github.com/visionalsun</url>
+		<connection>Visional Sun</connection>
+		<developerConnection>https://visionalsun.com</developerConnection>
+		<tag>Visional Sun</tag>
+	</scm>
+	<prerequisites></prerequisites>
+	
+	
+	<!-- 资源库 -->
+	<repositories></repositories>
+	
+	
+	<!-- 插件库 -->
+	<pluginRepositories></pluginRepositories>
+	
+	
+	<!-- 发布库 -->
+	<distributionManagement></distributionManagement>
+	<profiles></profiles>
+</project>

@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jan 25 21:37:11 CST 2025
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1737812229274
+http\://0.0.0.0/.error=Could not transfer artifact org.jbarcode\:jbarcode\:jar\:sources\:0.2.8 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [public (http\://maven.visionalsun.com/repository/maven-public, default, releases+snapshots)]
+https\://maven.aliyun.com/repository/central/.error=
+https\://maven.aliyun.com/repository/central/.lastUpdated=1737812229687
+https\://repo1.maven.org/maven2/.error=
+https\://repo1.maven.org/maven2/.lastUpdated=1737812231330
